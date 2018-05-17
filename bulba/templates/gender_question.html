@@ -1,0 +1,28 @@
+<html>
+<head>
+    {% load staticfiles %}
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image:url({% static 'ba.jpg' %})">
+
+    <h1>GENDER QUESTION Page<h1>
+        <h2>Hey, I been wonderin' - does your bear have a gender?</h2>
+<br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="It's a boy!" name="boy_name">
+        </form>
+<br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="It's a girl!" name="girl_name">
+        </form>
+<br>
+        <form action={% url "name" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="Gender is a social construct from which I defiantly abstain!" name="ungen_name">
+        </form>
+<br>
+        <form action={% url "diy_page" %} method="POST"> {% csrf_token %}
+            <input type="submit" value="I'll think up my own damned name, pal!" name="diy_name">
+        </form>
+</body>
+</html>

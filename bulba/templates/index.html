@@ -1,0 +1,29 @@
+
+<html>
+<head>
+    {% load staticfiles %}
+      <title>Bearacter Generator</title>
+<style>
+</style>
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body style="background-image:url({% static 'ba.jpg' %})">
+
+  <h1 class="py-5 text-center">WELCOME TO THE HONEY HEIST BEARACTER GENERATOR</h1>
+<ol>
+    <h1>Honey Heist is a tabletop role-playing game in which you play a criminal bear.</h1>
+    <h1>It was created by <a href="http://rowanrookanddecard.com">Grant Howitt.</a></h1>
+    <h1>The Honey Heist Bearacter Generator allows you to randomly generate your character's stats, species, and name.</h1>
+</ol>
+  <div class="col-md-4">
+      <br><br><br><br>
+<a class="btn btn-info" href={% url "stats" %}>Click to roll your stats</a>
+<br>
+<!--  <img src="{% static 'ba.jpg' %}" alt="Bear"/> -->
+<br> <br> <br>
+
+<a class="btn btn-info" href= {% url "gender_question" %}>Name Generator</a>
+  </div>
+</body>
+</html>
